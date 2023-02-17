@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "bb496202-8ddc-4967-b9ea-e747a1709749",
+		"name": "hackathon-javaee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23946198"
+	},
+	"item": [
+		{
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "Listar todos os Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:8080/api/usuario",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Usuário pelo Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:8080/api/usuario/1",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Usuário pelo Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:8080/api/usuario/5",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dataNascimento\": \"11-02-1958\",\n    \"email\": \"caroline_dapaz@bemarius.com.br\",\n    \"login\": \"caroline_dapaz\",\n    \"nome\": \"Caroline Márcia Aline da Paz\",\n    \"senha\": \"AtwuTUcltU\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:8080/api/usuario",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Usuário Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dataNascimento\": \"11-02-1958\",\n    \"email\": \"caroline_dapaz@bemarius.com.br\",\n    \"login\": \"julio_moreira\",\n    \"nome\": \"Caroline Márcia Aline da Paz\",\n    \"senha\": \"AtwuTUcltU\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{base_url}}:8080/api/usuario/6",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost"
+		}
+	]
+}
