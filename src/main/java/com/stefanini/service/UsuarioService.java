@@ -87,4 +87,15 @@ public class UsuarioService {
                     .build());
         }
     }
+
+    public List<UsuarioResponse> listarAniversariantesPorMes(int mesNumero) {
+        List<Usuario> usuarios = dao.findByDataNascimentoByMes(mesNumero);
+        return usuarios.stream()
+                .map(usuario -> usuarioMapper.usuarioToUsuarioResponse(usuario))
+                .collect(Collectors.toList());
+    }
+
+    public List<String> listProvedoresDeEmail() {
+        return dao.findProvedoresDeEmail();
+    }
 }

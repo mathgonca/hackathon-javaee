@@ -51,4 +51,20 @@ public class UsuarioController {
         UsuarioResponse usuarioResponse = service.encontrar(id);
         return Response.status(Response.Status.OK).entity(usuarioResponse).build();
     }
+
+    @GET
+    @Path("/aniversariantes/{mes}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response aniversariantesPorMes(@PathParam("mes") int mes) {
+        List<UsuarioResponse> usuarioResponses = service.listarAniversariantesPorMes(mes);
+        return Response.status(Response.Status.OK).entity(usuarioResponses).build();
+    }
+
+    @GET
+    @Path("/provedores-de-email")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response provedoresDeEmail() {
+        List<String> provedores = service.listProvedoresDeEmail();
+        return Response.status(Response.Status.OK).entity(provedores).build();
+    }
 }
