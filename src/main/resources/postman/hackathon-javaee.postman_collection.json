@@ -129,6 +129,71 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Listar todos os Usuário que fazem aniversário nesse mês",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:8080/api/usuario/aniversariantes/12",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario",
+								"aniversariantes",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos os provedores de email dos Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:8080/api/usuario/provedores-de-email",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario",
+								"provedores-de-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar todos os Usuários que iniciam o nome com a palavra procurada",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{base_url}}:8080/api/usuario/nome/L",
+							"protocol": "http",
+							"host": [
+								"{{base_url}}"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario",
+								"nome",
+								"L"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

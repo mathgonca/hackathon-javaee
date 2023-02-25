@@ -26,4 +26,9 @@ public class UsuarioDAO extends GenericDAO<Usuario, Long> {
         return em.createNativeQuery("SELECT SUBSTRING(u.email, POSITION('@' in u.email) + 1) as provedores from TB_USUARIO u group by provedores")
                 .getResultList();
     }
+
+    public List<Usuario> findByNomeStartsWith(String nome) {
+        return em.createQuery("SELECT u FROM Usuario u WHERE u.nome LIKE CONCAT(:nome, '%') ", Usuario.class)
+                .setParameter("nome", nome).getResultList();
+    }
 }

@@ -98,4 +98,11 @@ public class UsuarioService {
     public List<String> listProvedoresDeEmail() {
         return dao.findProvedoresDeEmail();
     }
+
+    public List<UsuarioResponse> findByNameStartsWith(String nome) {
+        List<Usuario> usuarios = dao.findByNomeStartsWith(nome);
+        return usuarios.stream()
+                .map(usuario -> usuarioMapper.usuarioToUsuarioResponse(usuario))
+                .collect(Collectors.toList());
+    }
 }

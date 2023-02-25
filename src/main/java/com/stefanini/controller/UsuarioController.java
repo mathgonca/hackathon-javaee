@@ -67,4 +67,12 @@ public class UsuarioController {
         List<String> provedores = service.listProvedoresDeEmail();
         return Response.status(Response.Status.OK).entity(provedores).build();
     }
+
+    @GET
+    @Path("/nome/{nome}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response findByNomeStartsWith(@PathParam("nome") String nome) {
+        List<UsuarioResponse> usuarioResponses = service.findByNameStartsWith(nome);
+        return Response.status(Response.Status.OK).entity(usuarioResponses).build();
+    }
 }
